@@ -1,0 +1,96 @@
+/* Corpo e fonte */
+body {
+  margin: 0;
+  overflow: auto;
+  font-family: 'Segoe UI', sans-serif;
+  background: rgba(10, 10, 10, 0.95); /* fundo preto simples */
+  color: #fff;
+}
+
+/* App container maior para imagens verticais */
+.app {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  background: rgba(30,30,30,0.95);
+  border-radius: 18px;
+  padding: 24px;
+  text-align: center;
+}
+
+/* Títulos */
+h1 { font-size: 26px; margin:0; }
+.subtitle { font-size: 14px; color: #aaa; margin-bottom:16px; }
+
+/* Input file */
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #222;
+  color: #eee;
+  cursor: pointer;
+}
+
+/* Status */
+.status {
+  margin-top: 12px;
+  padding: 10px;
+  font-size: 14px;
+  background: #222;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Preview container maior para imagens verticais */
+.preview-container {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: 500px; /* maior altura para vertical */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#previewCanvas, #originalCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#originalCanvas {
+  position: absolute;
+  top:0; left:0;
+  pointer-events: none;
+}
+
+.slider {
+  position:absolute;
+  top:0;
+  left:50%;
+  width:4px;
+  height:100%;
+  background: rgba(255,255,255,0.7);
+  cursor: ew-resize;
+  z-index:10;
+  transition: background 0.3s;
+}
+
+/* Botões */
+button {
+  width: 100%;
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:hover { transform: scale(1.03); }
+.confirm { background: #fff; color: #111; font-size: 16px; }
+#removeBg { background: #555; color: #fff; }
+#downloadBtn { background: #777; color: #fff; }
+button:disabled { opacity: 0.35; cursor: not-allowed; }
